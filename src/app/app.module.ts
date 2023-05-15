@@ -8,6 +8,7 @@ import { JugadoresComponent } from './components/jugadores/jugadores.component';
 import { GolesComponent } from './components/jugadores/goles/goles.component';
 import { ParticipacionesComponent } from './components/jugadores/participaciones/participaciones.component';
 import { DeportesquindioComponent } from './components/jugadores/deportesquindio/deportesquindio.component';
+import { HttpClientModule } from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -15,13 +16,14 @@ import { DeportesquindioComponent } from './components/jugadores/deportesquindio
     JugadoresComponent,
     GolesComponent,
     ParticipacionesComponent,
-    DeportesquindioComponent
+    DeportesquindioComponent,
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
