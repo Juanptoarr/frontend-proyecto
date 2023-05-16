@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CompeticionService } from '../../services/competicion.service'
 
 @Component({
   selector: 'app-jugadores',
@@ -10,11 +11,21 @@ export class JugadoresComponent implements OnInit {
 
   filtro: string = "";
 
-  constructor(private router: Router) { }
+  constructor(private router: Router,
+    private competicionService: CompeticionService) { }
 
   ngOnInit(): void {
+    
   }
 
+  getCompeticiones(){
+    this.competicionService.getCompeticiones().subscribe(
+      res => {
+        this.competicionService.jugadores = res;
+      },
+      err => console.log(err)
+    );
+  }
   limpiarPagina() {
       localStorage.clear();
     }
