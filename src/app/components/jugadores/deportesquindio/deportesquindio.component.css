@@ -9,17 +9,17 @@ body {
   color: #111111;
 }
 
-.container_info_club{
+.container_info{
   margin-top: 30px;
-  background-color: #0d6efd;
   display: flex;
+  background-color:#0d6efd;
   justify-content: center;
   align-items: center;
 }
 
 .container_club {
   margin-top: 30px;
-  background-color: #05dce0;
+  background-color: #12bcb1;
   display: flex;
   justify-content: center space-between;
   align-items: center;
@@ -27,7 +27,7 @@ body {
 
 .container_contact {
   margin-top: 30px;
-  background-color: aqua;
+  background-color: #12bcb1;
   display: flex;
   justify-content: center space-between;
   align-items: center;
