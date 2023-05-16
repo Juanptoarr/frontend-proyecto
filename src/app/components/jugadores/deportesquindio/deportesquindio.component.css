@@ -1,4 +1,48 @@
 .quindio-logo {
-  max-width: 200px;
+  max-width: 150px;
   margin-left: auto;
+}
+
+.container {
+  margin-bottom: 30px;
+}
+
+.container.my-4 {
+  margin-top: 30px;
+}
+
+main {
+  padding: 30px;
+}
+/* Estilo de las letras */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #3f4347;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+a {
+  color: #3f4347;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Tamaño de los iconos */
+i, .bi {
+  font-size: 2rem;
 }
