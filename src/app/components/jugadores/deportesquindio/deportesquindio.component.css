@@ -1,6 +1,7 @@
 .quindio-logo {
-  max-width: 150px;
-  margin-left: auto;
+  max-width: 100px;
+  display: flex; 
+  justify-content: center; 
 }
 
 .container {
@@ -19,7 +20,7 @@ body {
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.5;
-  color: #3f4347;
+  color: #111111;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -34,7 +35,7 @@ p {
 }
 
 a {
-  color: #3f4347;
+  color: #111111;
   text-decoration: none;
 }
 
@@ -42,7 +43,13 @@ a:hover {
   text-decoration: underline;
 }
 
-/* Tamaño de los iconos */
+
 i, .bi {
-  font-size: 2rem;
+  font-size: 1.5rem;
+}
+
+.contact-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
