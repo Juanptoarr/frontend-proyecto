@@ -9,7 +9,7 @@ import { CompeticionService } from '../../services/competicion.service'
 })
 export class JugadoresComponent implements OnInit {
 
-  filtro: string = "";
+  filtro = "";
 
   constructor(private router: Router,
     private competicionService: CompeticionService) { }
