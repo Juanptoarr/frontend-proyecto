@@ -23,7 +23,7 @@ export class JugadoresComponent implements OnInit {
       res => {
         this.competicionService.jugadores = res;
       },
-      err => console.log(err)
+      err => {}
     );
   }
   limpiarPagina() {
