@@ -9,12 +9,11 @@ interface Jugadores {
     total: number;
 }
 
-function getTable(json: any): string {
+function getTable(json: any): string {    
     const ligaGolesJugadores: Jugadores[] = json[1].Jugadores;
     const torneoGolesJugadores: Jugadores[] = json[3].Jugadores;
     const copaGolesJugadores: Jugadores[] = json[5].Jugadores;
     const femeninoGolesJugadores: Jugadores[] = json[7].Jugadores;
-    
 
     const nombresRepetidos = [
         ...ligaGolesJugadores.map(e => e.nombre),
@@ -35,7 +34,7 @@ function getTable(json: any): string {
         goles_total: null as number | null
     }
 
-    const inicioTabla = `<div class="container mt-5 mb-5"><div class="table-responsive"><table id="dataTable" class="table table-bordered text-center"><thead><tr><th scope="col">Nombre del jugador</th><th scope="col">Torneo</th><th scope="col">Liga</th><th scope="col">Copa</th><th scope="col">Femenino</th><th scope="col">Total</th></tr></thead><tbody>`
+    const inicioTabla = `<div class="container mt-5 mb-5"><div class="table-responsive"><table id="dataTable" class="table table-bordered text-center"><thead><tr><th scope="col">Nombre del jugador</th><th scope="col">Liga</th><th scope="col">Torneo</th><th scope="col">Copa</th><th scope="col">Femenino</th><th scope="col">Total</th></tr></thead><tbody>`
     const finalTabla = `</tbody></table></div></div>`
 
     for(const nombre of todosNombres){
@@ -66,10 +65,10 @@ function getTable(json: any): string {
         const fila = `
             <tr>            
             <th>${object.nombre}</th>
-            <th>${object.goles_torneo}</th>
             <th>${object.goles_liga}</th>
-            <th>${object.goles_femenino}</th>
+            <th>${object.goles_torneo}</th>
             <th>${object.goles_copa}</th>
+            <th>${object.goles_femenino}</th>
             <th>${object.goles_total}</th>
             </tr>
         `
@@ -78,6 +77,7 @@ function getTable(json: any): string {
     }    
 
     const tabla = `${inicioTabla}${filas}${finalTabla}`.split(",").join("")    
+    
     return tabla;
 }
 
