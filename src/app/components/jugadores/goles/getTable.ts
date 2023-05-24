@@ -10,6 +10,7 @@ interface Jugadores {
 }
 
 function getTable(json: any): string {    
+    console.log(json)
     const ligaGolesJugadores: Jugadores[] = json[0].Jugadores;
     const torneoGolesJugadores: Jugadores[] = json[2].Jugadores;
     const copaGolesJugadores: Jugadores[] = json[4].Jugadores;
