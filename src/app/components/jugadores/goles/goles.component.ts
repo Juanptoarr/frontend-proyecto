@@ -8,7 +8,7 @@ import { getTable } from './getTable';
   styleUrls: ['./goles.component.css']
 })
 
-//https://datosquindiouq-production-30c6.up.railway.app/api/jugadores/
+//http://datosquindiouq-production-02cf.up.railway.app//api/jugadores/
 
 export class GolesComponent {
   constructor(private http: HttpClient) {
@@ -16,7 +16,7 @@ export class GolesComponent {
   }
 
   fetchData() {
-    this.http.get("https://datosquindiouq-production-30c6.up.railway.app/api/jugadores/").subscribe((data: any) => {
+    this.http.get("http://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
       let table = getTable(data);
       const contenedor = document.getElementById('contenedor');
       const search = document.getElementById('search');
@@ -51,7 +51,7 @@ export class GolesComponent {
 
   keyUp(search: any, todes: any, torneo: any, liga: any, copa: any, femenino: any) {
     todes.addEventListener('click', () => {
-      this.http.get("https://datosquindiouq-production-30c6.up.railway.app/api/jugadores/").subscribe((data: any) => {
+      this.http.get("http://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
         let table = getTable(data);
         const contenedor = document.getElementById('contenedor');
         if (contenedor) {

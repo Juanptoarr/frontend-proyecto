@@ -6,7 +6,7 @@ import { Jugador } from '../models/jugador';
   providedIn: 'root'
 })
 export class CompeticionService {
-  URL_API = 'http://localhost:8000/api/jugadores'//Ruta del despliegue del backend
+  URL_API = 'http://datosquindiouq-production-02cf.up.railway.app/api/jugadores/'//Ruta del despliegue del backend
   jugadores: Jugador[];
   constructor(private http: HttpClient) {}
   getCompeticiones(){

@@ -13,7 +13,7 @@ export class ParticipacionesComponent {
   }
 
   fetchData() {
-    this.http.get("https://datosquindiouq-production-30c6.up.railway.app/api/jugadores/").subscribe((data: any) => {
+    this.http.get("http://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
       let table = getTable(data);
       const contenedor = document.getElementById('contenedor');
       const search = document.getElementById('search');
@@ -48,7 +48,7 @@ export class ParticipacionesComponent {
 
   keyUp(search: any, todes: any, torneo: any, liga: any, copa: any, femenino: any) {
     todes.addEventListener('click', () => {
-      this.http.get("https://datosquindiouq-production-30c6.up.railway.app/api/jugadores/").subscribe((data: any) => {
+      this.http.get("http://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
         let table = getTable(data);
         const contenedor = document.getElementById('contenedor');
         if (contenedor) {
