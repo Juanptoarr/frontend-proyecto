@@ -57,11 +57,11 @@ export class ParticipacionesComponent {
       });
     })
 
-    torneo.addEventListener('click', () => {
+    liga.addEventListener('click', () => {
       this.hideColumnsExcept([0, 1]);
     });
-
-    liga.addEventListener('click', () => {
+    
+    torneo.addEventListener('click', () => {
       this.hideColumnsExcept([0, 2]);
     });
 

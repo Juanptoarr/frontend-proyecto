@@ -51,20 +51,20 @@ export class GolesComponent {
 
   keyUp(search: any, todes: any, torneo: any, liga: any, copa: any, femenino: any) {
     todes.addEventListener('click', () => {
+      const contenedor = document.getElementById('contenedor');
       this.http.get("https://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
         let table = getTable(data);
-        const contenedor = document.getElementById('contenedor');
         if (contenedor) {
           contenedor.innerHTML = table;
         } 
       });
     })
 
-    torneo.addEventListener('click', () => {
+    liga.addEventListener('click', () => {
       this.hideColumnsExcept([0, 1]);
     });
 
-    liga.addEventListener('click', () => {
+    torneo.addEventListener('click', () => {
       this.hideColumnsExcept([0, 2]);
     });
 
