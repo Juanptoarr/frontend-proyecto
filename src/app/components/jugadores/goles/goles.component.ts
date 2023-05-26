@@ -8,7 +8,7 @@ import { getTable } from './getTable';
   styleUrls: ['./goles.component.css']
 })
 
-//http://datosquindiouq-production-02cf.up.railway.app//api/jugadores/
+//https://datosquindiouq-production-02cf.up.railway.app//api/jugadores/
 
 export class GolesComponent {
   constructor(private http: HttpClient) {
@@ -16,7 +16,7 @@ export class GolesComponent {
   }
 
   fetchData() {
-    this.http.get("http://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
+    this.http.get("https://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
       let table = getTable(data);
       const contenedor = document.getElementById('contenedor');
       const search = document.getElementById('search');

@@ -13,7 +13,7 @@ export class ParticipacionesComponent {
   }
 
   fetchData() {
-    this.http.get("http://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
+    this.http.get("https://datosquindiouq-production-02cf.up.railway.app/api/jugadores/").subscribe((data: any) => {
       let table = getTable(data);
       const contenedor = document.getElementById('contenedor');
       const search = document.getElementById('search');
